@@ -114,7 +114,7 @@ EOF
   chmod +x /tmp/dashboard-linux-$ARCH
   mv -f /tmp/dashboard-linux-$ARCH $WORK_DIR/app
   wget -qO $WORK_DIR/cloudflared ${GH_PROXY}https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-$ARCH
-  wget -O $WORK_DIR/nezha-agent.zip ${GH_PROXY}https://github.com/nezhahq/agent/releases/latest/download/nezha-agent_linux_$ARCH.zip
+  wget -O $WORK_DIR/nezha-agent.zip ${GH_PROXY}https://github.com/nezhahq/agent/releases/download/v0.20.5/nezha-agent_linux_$ARCH.zip
   unzip -o $WORK_DIR/nezha-agent.zip -d $WORK_DIR/
   rm -rf $WORK_DIR/nezha-agent.zip /tmp/dist /tmp/dashboard.zip
 
