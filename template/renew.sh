@@ -19,8 +19,8 @@ trap "rm -rf $TEMP_DIR; echo -e '\n' ;exit" INT QUIT TERM EXIT
 
 mkdir -p $TEMP_DIR
 
-# 在线更新 renew.sh，backup.sh 和 restore.sh 文件
-for i in {renew,backup,restore}; do
+# 在线更新 renew.sh和 restore.sh 文件
+for i in {renew,restore}; do
   if [ -s $WORK_DIR/$i.sh ]; then
     sed -n '1,/^########/p' $WORK_DIR/$i.sh > $TEMP_DIR/$i.sh
     wget -qO- ${GH_PROXY}https://raw.githubusercontent.com/fscarmen2/Argo-Nezha-Service-Container/main/template/$i.sh | sed '1,/^########/d' >> $TEMP_DIR/$i.sh
