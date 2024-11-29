@@ -8,9 +8,9 @@ jobs:
       runs-on: ubuntu-latest
       name: "Build image"
       env:
-        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-        DOCKERHUB_REPOSITORY: ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPO }}:latest
+        DOCKER_USERNAME: ${{ vars.DOCKER_USERNAME }}
+        DOCKER_PASSWORD: ${{ vars.DOCKER_PASSWORD }}
+        DOCKERHUB_REPOSITORY: ${{ vars.DOCKER_USERNAME }}/${{ vars.DOCKER_REPO }}:latest
 
       steps:
       - name: Checkout code
